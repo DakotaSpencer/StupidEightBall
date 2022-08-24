@@ -1,0 +1,12 @@
+.ball {
+    background-color: black;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.window {
+    background-color: 000044;
+    border-radius: 50%;
+    position: relative;
+    top: 30%;
+}
