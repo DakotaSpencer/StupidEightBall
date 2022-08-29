@@ -1,12 +1,67 @@
+html {
+    text-align: center;
+}
+
+.lower {
+    z-index: -1;
+}
+
 .ball {
+    position: absolute;
+    top: 150px;
+    left: 500px;
     background-color: black;
     border-radius: 50%;
-    margin: auto;
+    height: 500px;
+    aspect-ratio: 1/1;
 }
 
 .window {
-    background-color: 000044;
     border-radius: 50%;
     position: relative;
-    top: 30%;
+    top: 50px;
+    margin: auto;
+    height: 300px;
+    aspect-ratio: 1/1;
+    z-index: 2;
+}
+
+#response-text {
+    color: white;
+    font-size: 30px;
+    margin: auto;
+    position: relative;
+    top: 120px
+}
+
+.eight {
+    animation: eight-flip 1s;
+    background-color: white;
+}
+
+.text {
+    background-color: #0d0d77;
+    animation: text-flip 1s;
+}
+
+@keyframes eight-flip {
+    0% {
+        transform-style: preserve-3d;
+        transform: rotateX(100deg);
+    }
+    100% {
+        transform-style: preserve-3d;
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes text-flip {
+    0% {
+        transform-style: preserve-3d;
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform-style: preserve-3d;
+        transform: rotateX(0deg);
+    }
 }
