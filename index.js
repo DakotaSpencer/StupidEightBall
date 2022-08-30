@@ -1,6 +1,6 @@
 const classes = ["eight","text"]
 
-keywords = ["who", "what", "when", "where", "why","do","should","new","does","famous","millionaire","promotion","marry","pass","crush","love","rich","will","give"];
+keywords = ["I", "me", "my", "where", "why","do","should","new","does","famous","millionaire","promotion","marry","pass","crush","love","rich","will","give"];
 positive_keywords = ["gay"]
 negative_keywords = ["sad", "depressed", "unhappy", "angry", "miserable", "fuck", "shit", "pissed", "not vibing"];
 
@@ -17,7 +17,7 @@ const response = document.getElementById('response')
 function getResponse(evt){
     evt.preventDefault()
     console.log(query)
-    let queryText = query.value
+    let queryText = query.value.toLowerCase()
     let reply
     if (negative_keywords.some(word => queryText.includes(word))) {
         reply = respones[getWeightedResponse(false)]
@@ -29,6 +29,7 @@ function getResponse(evt){
         reply = respones[Math.floor(Math.random()*respones.length)]
         console.log(reply)
     }
+    response.innerHTML = reply
     responseText.innerText = reply
     query.value = ""
 }
