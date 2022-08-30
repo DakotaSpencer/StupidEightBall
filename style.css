@@ -7,7 +7,12 @@ html {
 }
 
 .ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    margin: auto;
+    z-index: -1;
     top: 150px;
     left: 500px;
     background-color: black;
@@ -19,9 +24,9 @@ html {
 .window {
     border-radius: 50%;
     position: relative;
-    top: 50px;
     margin: auto;
-    height: 300px;
+    height: 250px;
+    align-self: center;
     aspect-ratio: 1/1;
     z-index: 2;
 }
@@ -35,6 +40,14 @@ html {
 }
 
 .eight {
+    align-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    margin: auto;
+    height: 250px;
+    aspect-ratio: 1/1;
+    z-index: 2;
     animation: eight-flip 1s;
     background-color: white;
 }
@@ -47,11 +60,11 @@ html {
 @keyframes eight-flip {
     0% {
         transform-style: preserve-3d;
-        transform: rotateX(100deg);
+        transform: rotateX(90deg);
     }
-    100% {
+    80% {
         transform-style: preserve-3d;
-        transform: rotateX(0deg);
+        transform: rotateX(0.1deg);
     }
 }
 
