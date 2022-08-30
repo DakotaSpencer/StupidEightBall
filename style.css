@@ -32,11 +32,12 @@ html {
 }
 
 #response-text {
-    color: black;
+    color: white;
     font-size: 30px;
     margin: auto;
     position: relative;
-    top: 100px
+    max-width: fit-content;
+    top: 110px
 }
 
 .eight {
