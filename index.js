@@ -1,8 +1,8 @@
 const classes = ["eight","text"]
 
-keywords = ["I", "me", "my", "where", "why","do","should","new","does","famous","millionaire","promotion","marry","pass","crush","love","rich","will","give"];
-positive_keywords = ["gay"]
-negative_keywords = ["sad", "depressed", "unhappy", "angry", "miserable", "fuck", "shit", "pissed", "not vibing"];
+keywords = ["I", "me", "my", "where", "why","do","should","new","does","famous","millionaire","promotion","marry","pass","crush","love","rich"];
+gay_keywords = ["gay"]
+negative_keywords = ["sad", "mad", "angry", "ever", "never","will","give"];
 
 const responses = ["My reply is no","Don't count on it","My sources say no","Very doubtful","Outlook not so good","Better not tell you now","Cannot predict now","Ask again later","Reply hazy try again","Concentrate and ask again","Outlook good","Most likely","Signs point to yes","As I see it, yes","Yes","You may rely on it","Without a doubt","Yes, definitely","It is decidedly so","It is certain"]
 
@@ -20,7 +20,7 @@ function getResponse(evt){
     if (negative_keywords.some(word => queryText.includes(word))) {
         reply = responses[getWeightedResponse(false)]
         console.log(reply)
-    } else if (positive_keywords.some(word => queryText.includes(word))) {
+    } else if (gay_keywords.some(word => queryText.includes(word))) {
         reply = responses[getWeightedResponse(true)]
         console.log(reply)
     } else {
